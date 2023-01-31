@@ -25,6 +25,7 @@ album_2 = Album("Curtain Call", "Rap", artist_1)
 album_result = album_repository.save(album_2)
 
 # result = album_repository.select_all()
-result = album_repository.find_by_id(41)
+# result = album_repository.find_by_id(41)
+result = artist_repository.find_album(artist_3)
 
 pdb.set_trace()

@@ -55,7 +55,7 @@ def find_by_id(id):
     return artist        
 
 
-def albums(artist):
+def find_album(artist):
     albums = []
     sql = "SELECT * FROM albums WHERE artist_id = %s"
     values = [artist.id]
@@ -63,5 +63,5 @@ def albums(artist):
     
     for row in results:
         album =Album(row['title'], row['genre'], artist, row['id'] )
-        albums.append(task)
+        albums.append(album)
     return albums
